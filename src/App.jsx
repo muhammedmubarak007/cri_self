@@ -23,7 +23,7 @@ const QUESTIONS = [
   },
   {
     id: 3,
-    question: "I often question whether I have the skills to be a good parent.",
+    question: "Overall, I am dissatisfied with myself. ",
     type: "buttons",
     options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
     field: "q1"
@@ -32,7 +32,7 @@ const QUESTIONS = [
     id: 4,
     question: "I struggle to solve problems that come up in my job.",
     type: "buttons",
-    options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
+    options: ['Strongly Disagree', 'Disagree', 'Agree',  'Strongly Agree '],
     field: "q2"
   },
   {
