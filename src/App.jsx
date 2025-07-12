@@ -25,21 +25,21 @@ const QUESTIONS = [
     id: 3,
     question: "Overall, I am dissatisfied with myself. ",
     type: "buttons",
-    options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
+    options: ['Strongly Disagree ', 'Disagree', 'Agree', 'Strongly Agree'],
     field: "q1"
   },
   {
     id: 4,
-    question: "I struggle to solve problems that come up in my job.",
+    question: "I often feel that I lack good qualities. ",
     type: "buttons",
     options: ['Strongly Disagree', 'Disagree', 'Agree',  'Strongly Agree '],
     field: "q2"
   },
   {
     id: 5,
-    question: "I find it difficult to work well as part of a team.",
+    question: "At times I think I am no good at all. ",
     type: "buttons",
-    options: ['Strongly Disagree', 'Disagree', 'Neutral', 'Agree', 'Strongly Agree'],
+    options: ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'],
     field: "q3"
   }
 ];
