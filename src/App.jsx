@@ -24,27 +24,33 @@ const QUESTIONS = [
   },
   {
     id: 3,
+    question: "What is your email address?",
+    type: "email",
+    field: "email"
+  },
+  {
+    id: 4,
     question: "What is your gender?",
     type: "buttons",
     options: ["Male", "Female", "Other"],
     field: "gender"
   },
   {
-    id: 4,
+    id: 5,
     question: "Overall, I am dissatisfied with myself.",
     type: "buttons",
     options: ['Strongly Disagree ', 'Disagree', 'Agree', 'Strongly Agree'],
     field: "q1"
   },
   {
-    id: 5,
+    id: 6,
     question: "I often feel that I lack good qualities.",
     type: "buttons",
     options: ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'],
     field: "q2"
   },
   {
-    id: 6,
+    id: 7,
     question: "At times I think I am no good at all.",
     type: "buttons",
     options: ['Strongly Disagree', 'Disagree', 'Agree', 'Strongly Agree'],
@@ -83,7 +89,7 @@ function App() {
     e.preventDefault();
     setSubmissionState({ isSubmitting: true, error: null });
 
-    const url = "https://script.google.com/macros/s/AKfycbyaunxD3Xf86_92PbGCMCju3T3VfKABUh6gV1b14yjw0VX0HOSx6k_GiFu66dfh9tYUFg/exec";
+    const url = "https://script.google.com/macros/s/AKfycbxQzPu2OdmEEPST_QRIOTdF9yjy7MeAmqGYN7uvZSClWzE4VVW9Ku3i0HB0dzkRBQ98qg/exec";
 
     try {
       const response = await fetch(url, {
@@ -94,6 +100,7 @@ function App() {
         body: new URLSearchParams({
           Name: formData.name,
           Age: formData.age,
+          Email: formData.email,
           Phone: formData.phone,
           Gender: formData.gender,
           Question1: formData.q1,
@@ -156,6 +163,20 @@ function App() {
               onChange={(phone) => handleInputChange(currentQuestion.field, phone)}
               inputClass="text-input"
               inputStyle={{ width: '100%' }}
+            />
+          </div>
+        );
+
+      case "email":
+
+        return (
+          <div className="input-container">
+            <input
+              type="email"
+              className="text-input"
+              value={formData[currentQuestion.field]}
+              onChange={(e) => handleInputChange(currentQuestion.field, e.target.value)}
+              placeholder="Type your email"
             />
           </div>
         );
